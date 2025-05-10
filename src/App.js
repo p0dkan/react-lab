@@ -14,7 +14,8 @@ function App() {
     }
 
     function validateEmail(email) {
-        return email.includes('@');
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
     }
 
     function handleSubmit(event) {
